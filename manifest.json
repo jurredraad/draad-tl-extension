@@ -5,7 +5,7 @@
   "description": "AI-assistent voor TeamLeader support tickets",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [
-    "https://focus.teamleader.eu/*"
+    "https://mijn.draad.nl/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -20,7 +20,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://focus.teamleader.eu/*"],
+      "matches": ["https://mijn.draad.nl/*"],
       "js": ["content_script.js"],
       "run_at": "document_idle"
     }
