@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TL AI Assistent</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- Instellingenscherm -->
+  <div id="settings-screen" class="screen hidden">
+    <div class="header">
+      <button id="back-btn" class="icon-btn">&#8592;</button>
+      <h2>Instellingen</h2>
+    </div>
+    <label for="api-key-input">Anthropic API Key</label>
+    <input type="password" id="api-key-input" placeholder="sk-ant-..." />
+    <button id="save-key-btn" class="btn primary">Opslaan</button>
+    <p id="settings-status" class="status"></p>
+  </div>
+
+  <!-- Hoofdscherm: invoer -->
+  <div id="main-screen" class="screen">
+    <div class="header">
+      <h1>TL AI Assistent</h1>
+      <button id="settings-btn" class="icon-btn" title="Instellingen">&#9881;</button>
+    </div>
+    <label for="context-input">Extra context <span class="optional">(optioneel)</span></label>
+    <textarea id="context-input" placeholder="Bijv. klant heeft al eerder gebeld..."></textarea>
+    <button id="generate-btn" class="btn primary">Genereer antwoord</button>
+    <p id="main-status" class="status"></p>
+  </div>
+
+  <!-- Previewscherm -->
+  <div id="preview-screen" class="screen hidden">
+    <div class="header">
+      <button id="preview-back-btn" class="icon-btn">&#8592;</button>
+      <h2 id="preview-title">Gegenereerd antwoord</h2>
+    </div>
+    <div id="preview-text" class="preview-box"></div>
+    <div class="btn-row">
+      <button id="regenerate-btn" class="btn secondary">Opnieuw</button>
+      <button id="inject-btn" class="btn primary">Plak in ticket</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
